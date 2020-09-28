@@ -21,6 +21,7 @@ datelist = []
 monthlist = []
 daylist = []
 
+#Populating datelist, monthlist and daylist
 while start_data_collection <= end_data_collection:
     month = start_data_collection.strftime('%m')
     day = (start_data_collection.strftime('%d'))
@@ -30,6 +31,7 @@ while start_data_collection <= end_data_collection:
     daylist.append(day)
     start_data_collection += delta
 
+#Variable Cleanup
 del start_data_collection
 del end_data_collection
 del delta
