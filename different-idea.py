@@ -9,7 +9,7 @@ current_date = date.today()
 current_month = current_date.strftime('%m')
 current_day = current_date.strftime('%d')
 
-datafile = openpyxl.load_workbook('datasheet.xlsx')
+datafile = openpyxl.load_workbook('Data Jam Form.xlsx')
 sheet = datafile.active
 
 start_data_collection = date(2020, 9, 1)
@@ -58,7 +58,6 @@ for i in range(len(datelist)):
     sleep(3)
 
     #Writing to excel file
-    sheet[f'A{row}'] = datelist[i]              #Date
     sheet[f'B{row}'] = hightemperature.text     #High Temperature
     sheet[f'C{row}'] = lowtemperature.text      #Low Temperature
     sheet[f'D{row}'] = avgtemperature.text      #Avg Temperature
@@ -67,7 +66,7 @@ for i in range(len(datelist)):
         sheet[f'F{row}'] = precip.text          #Precipitation
 
     #Save Excel spreadsheet and increment row    
-    datafile.save('datasheet.xlsx')
+    datafile.save('Data Jam Form.xlsx')
     row += 1
 
     #Close browser
