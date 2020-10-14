@@ -9,7 +9,7 @@ current_date = date.today()
 current_month = current_date.strftime('%m')
 current_day = current_date.strftime('%d')
 
-datafile = openpyxl.load_workbook('Data Jam Form.xlsx')
+datafile = openpyxl.load_workbook('MillerPeytonDataJam13165.xlsx')
 sheet = datafile.active
 
 start_data_collection = date(2020, 9, 1)
@@ -66,7 +66,7 @@ for i in range(len(datelist)):
         sheet[f'F{row}'] = precip.text          #Precipitation
 
     #Save Excel spreadsheet and increment row    
-    datafile.save('Data Jam Form.xlsx')
+    datafile.save('MillerPeytonDataJam13165.xlsx')
     row += 1
 
     #Close browser
